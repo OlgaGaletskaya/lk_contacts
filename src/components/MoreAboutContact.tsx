@@ -1,25 +1,11 @@
 import { observer } from 'mobx-react-lite'
 import React, { useContext, useState } from 'react'
-import { Button, Card, Col, Container, Form, Row } from 'react-bootstrap'
-import CardHeader from 'react-bootstrap/esm/CardHeader'
+import { Button, Card, Col, Container, Row } from 'react-bootstrap'
 import { Context } from '..'
 
 const MoreAboutContact = observer(() => {
     const {contact} = useContext(Context)
-    const {user} = useContext(Context)
     const moreAboutContact = contact._contact.filter(e => e.id === contact._moreAboutContact)[0]
-    const [changeContact, setChangeContact] = useState(moreAboutContact)
-    const saveChanges = () => {
-        if (moreAboutContact.id === 0 ){
-            setChangeContact({...changeContact, id: Date.now(), userId: user._userId})
-        }else{
-            contact.deleteContact(moreAboutContact.id)
-        }
-        contact.addContact(changeContact)
-        contact.changeMoreAboutContact(changeContact.id)
-        contact.setChangeContact(false)
-    }
-
   return (
     <Container>
         <Card>

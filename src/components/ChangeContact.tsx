@@ -11,7 +11,7 @@ const ChangeContact = observer(() => {
     const [error, setError] = useState(false)
     useMemo(()=>{
         setChangeContact(moreAboutContact)
-        if(changeContact.id === 0){
+        if(moreAboutContact.id === 0){
             setChangeContact({...changeContact, id: Date.now(), userId: user._userId})
         }
     }, [moreAboutContact])

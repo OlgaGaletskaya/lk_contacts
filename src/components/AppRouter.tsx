@@ -4,7 +4,6 @@ import {Routes, Route} from 'react-router-dom'
 import { Context } from '..';
 import Auth from "../pages/Auth";
 import Contacts from "../pages/Contacts";
-import UserStore from '../store/UserStore';
 
 const AppRouter: React.FC = observer(() => {
     const {user} = useContext(Context)
