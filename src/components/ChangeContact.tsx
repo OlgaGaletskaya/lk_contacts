@@ -19,7 +19,7 @@ const ChangeContact = observer(() => {
         if (moreAboutContact.id !== 0 ){
             contact.deleteContact(moreAboutContact.id)
         }
-        if (changeContact.name === '' && changeContact.surname === '' ){
+        if (changeContact.name === '' || changeContact.surname === '' ){
             setError(true)
         }
         else 
