@@ -16,18 +16,19 @@ const ChangeContact = observer(() => {
         }
     }, [moreAboutContact])
     const saveChanges = () => {
-        if (moreAboutContact.id !== 0 ){
-            contact.deleteContact(moreAboutContact.id)
-        }
+        
         if (changeContact.name === '' || changeContact.surname === '' ){
             setError(true)
         }
         else 
         {
-        contact.addContact(changeContact)
-        contact.changeMoreAboutContact(changeContact.id)
-        contact.setChangeContact(false)
-        setError(false)
+            if (moreAboutContact.id !== 0 ){
+                contact.deleteContact(moreAboutContact.id)
+            }
+            contact.addContact(changeContact)
+            contact.changeMoreAboutContact(changeContact.id)
+            contact.setChangeContact(false)
+            setError(false)
         }
     };
 
