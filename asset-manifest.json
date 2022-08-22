@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/lk_contacts/static/js/main.99e3fc6b.js",
+    "main.js": "/lk_contacts/static/js/main.5b84e4d3.js",
     "index.html": "/lk_contacts/index.html",
-    "main.99e3fc6b.js.map": "/lk_contacts/static/js/main.99e3fc6b.js.map"
+    "main.5b84e4d3.js.map": "/lk_contacts/static/js/main.5b84e4d3.js.map"
   },
   "entrypoints": [
-    "static/js/main.99e3fc6b.js"
+    "static/js/main.5b84e4d3.js"
   ]
 }
